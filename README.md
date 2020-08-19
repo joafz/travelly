@@ -1,7 +1,6 @@
 # Travelly Agency
 
-
-<p>Open link in a new window or tab: <a href="https://travellyagency.surge.sh" target="_blank">Visit the Website.</a></p>
+<a href="#" onclick='window.open("https://travellyagency.surge.sh");return false;'>Visit the Website.</a>
 
 <br>
 <br>
