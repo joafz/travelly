@@ -1,5 +1,7 @@
 /* Global Styles */
 
+/* rem is used for accessibility purpose. */
+
 * {
   margin: 0;
   padding: 0;
@@ -20,11 +22,7 @@ h1 {
   font-size: 2.6rem;
 }
 
-li,
-button,
-label,
-input,
-p {
+li, button, label, input, p {
   font-size: 2rem;
 }
 
@@ -56,6 +54,7 @@ button {
   /* Animation */
   transition: background 0.5s ease-in-out;
 }
+
 button:hover {
   background: #27394e;
 }
@@ -103,8 +102,7 @@ nav ul {
 
 .hero {
   min-height: 90vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url(/img/landing-page.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url(/img/landing-page.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -124,8 +122,7 @@ nav ul {
 
 #locations {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("/img/new-york-page.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("/img/new-york-page.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -133,16 +130,22 @@ nav ul {
   position: relative;
   overflow: hidden;
 }
+
 /* Make the text center */
+
 .locations-head {
   width: 90%;
   margin: auto;
 }
+
 .locations-head h2 {
-  padding: 1rem 0rem; /*Top/bottom left/right */
+  padding: 1rem 0rem;
+  /*Top/bottom left/right */
   text-decoration: underline;
-  text-decoration-thickness: 0.5rem; /*Makes the underline thicker*/
+  text-decoration-thickness: 0.5rem;
+  /*Makes the underline thicker*/
 }
+
 .locations-head h3 {
   padding: 4rem 0rem;
   /* Use gradient coloring behind the h3 text */
@@ -151,17 +154,20 @@ nav ul {
   -webkit-background-clip: text;
   color: transparent;
 }
+
 .cloud {
   position: absolute;
   top: 0%;
   right: 0%;
   animation: cloudAnimation 3s infinite alternate ease-in-out;
 }
-.moving-cloud-1 {
-}
+
+.moving-cloud-1 {}
+
 .moving-cloud-2 {
   top: 20%;
-  z-index: -1; /*making the 2nd cloud go behind the first one*/
+  z-index: -1;
+  /*making the 2nd cloud go behind the first one*/
   opacity: 0.5;
 }
 
@@ -187,16 +193,20 @@ nav ul {
   color: white;
   text-align: center;
 }
+
 .benefits-head h3 {
   padding: 1rem;
 }
+
 .card {
   flex: 1 1 25rem;
   min-height: 40vh;
   margin: 2rem 5rem;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1); /*x y blur color*/
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+  /*x y blur color*/
   text-align: center;
 }
+
 .cards {
   width: 90%;
   margin: auto;
@@ -205,13 +215,15 @@ nav ul {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .cards img {
   max-width: 15%;
   margin: 2rem;
 }
-.card h4,
-.card p {
+
+.card h4, .card p {
   padding: 1rem;
+  line-height: 1.8;
 }
 
 .card-icon {
@@ -219,34 +231,38 @@ nav ul {
 }
 
 /* Contact section */
+
 #contact {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("/img/contact-mountain.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("/img/contact-mountain.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .form-wrapper {
   background: rgba(19, 28, 39, 0.8);
   width: 60%;
   color: white;
   border-radius: 20px;
 }
+
 .form-head {
   text-align: center;
   padding: 4rem;
 }
-.name-form,
-.email-form {
+
+.name-form, .email-form {
   padding: 3rem;
   text-align: center;
 }
+
 .form-wrapper label {
   margin: 0rem 3rem;
 }
+
 .form-wrapper button {
   width: 100%;
   padding: 2rem;
@@ -254,15 +270,20 @@ nav ul {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+
 .form-wrapper input {
-  padding: 1rem 3rem; /*top/bottom left/right*/
+  padding: 1rem 3rem;
+  /*top/bottom left/right*/
 }
+
 /* Footer */
+
 footer {
   color: white;
   background: rgba(19, 28, 39, 1);
   font-size: 2rem;
 }
+
 .footer-wrapper {
   display: flex;
   padding: 2rem;
@@ -272,9 +293,11 @@ footer {
   min-height: 10vh;
   flex-wrap: wrap;
 }
+
 footer h5 {
   flex: 1 1 40rem;
 }
+
 footer ul {
   display: flex;
   list-style: none;
@@ -283,7 +306,15 @@ footer ul {
   align-items: center;
 }
 
+/* keyboard accessibility */
+
+button:focus {
+  background: #2c3f57;
+  outline-style: solid;
+}
+
 /* Media Queries */
+
 @media screen and (max-width: 932px) {
   html {
     font-size: 45%;
