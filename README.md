@@ -1,6 +1,6 @@
 # Travelly Agency
 
-<a href="#" onclick='window.open("https://travellyagency.surge.sh");return false;'>Visit the Website.</a>
+<a onclick="window.open(this.href,'_blank');return false;" href="https://travellyagency.surge.sh">Visit the Website.</a>
 
 <br>
 <br>
